@@ -466,7 +466,7 @@ cat /etc/kubernetes/admin.conf > ~/.kube/config
 
 
 #
-## Step 12: Scale your cluster:
+## Scale your cluster:
 You can add worker nodes from your cluster by running the scale playbook. For more information, see "Adding nodes". You can remove worker nodes from your cluster by running the remove-node playbook. For more information, see "Remove nodes".
 
 
@@ -511,7 +511,7 @@ ansible-playbook -i inventory/mycluster/hosts.yml remove-node.yml -b -v \
 If a node is completely unreachable by ssh, add `--extra-vars reset_nodes=false` to skip the node reset step. If one node is unavailable, but others you wish to remove are able to connect via SSH, you could set `reset_nodes=false` as a host var in inventory.
 
 #
-## Step 13: Upgrading Kubernetes in Kubespray. [link](https://github.com/kubernetes-sigs/kubespray/blob/release-2.23/docs/upgrades.md#upgrading-kubernetes-in-kubespray)
+## Upgrading Kubernetes in Kubespray. [link](https://github.com/kubernetes-sigs/kubespray/blob/release-2.23/docs/upgrades.md#upgrading-kubernetes-in-kubespray)
 
 Kubespray handles upgrades the same way it handles initial deployment. That is to say that each component is laid down in a fixed order.
 
